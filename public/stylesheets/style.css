@@ -1,0 +1,108 @@
+body {
+  padding: 50px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color:#332215;
+}
+
+label{
+	vertical-align: top;
+	position: relative;
+	font-size: 20px;
+	padding: 0;
+}
+
+a {
+  color: #614129;
+}
+
+.form-row {
+	padding:0.5em;
+}
+
+form {
+	margin-top:1em;
+	margin-bottom:1em;
+}
+
+#wrapper {
+	padding:2em;
+	border-radius: 25px;
+  	background-color:#D5B59C;
+}
+
+#grocery-list {
+	background-color:#ddd;
+	padding: 1em;
+}
+
+#grocery-list li {
+	list-style-type: none;
+	padding-top:0.25em;
+	padding-bottom:0.25em;
+}
+
+#grocery-list li.checked {
+	text-decoration: line-through;
+	padding: 0.25em 0.25em 0.25em 1.5em;
+}
+
+.qty {
+	width: 3em;
+}
+
+
+input[type=submit] {
+	padding:5px 15px; 
+	border-radius: 8px;
+	background:#C1916c; 
+	border:0 none;
+	cursor:pointer;
+	font-size:1em;
+}
+
+input {
+	font-size:1em;
+	border-radius: 0.45px;
+}
+select{
+	border-radius: 0.45px;
+}
+input[type=date]{
+	margin:0.2em;
+}
+textarea{
+	margin:0.2em;
+	font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+	color:#332215;
+	vertical-align: top;
+}
+input[type=submit]:hover {
+	background-color: #785133;
+	color: white;
+}
+
+#filter{
+	float:right;
+	position:relative;
+}
+
+#textbox{
+	width:24em;
+	border-radius: 0.4em;
+	display: inline-block;
+	border: 1px solid #6c492e;
+	background-color:#a67046;
+	text-align:left;
+	color:antiquewhite;
+	word-break: break-all;
+}
+#journaltable{
+	margin-top:1em;
+	margin-bottom:1em;	
+}
+#pin{
+	max-width:8%;  
+	height: auto; 
+	float:right;
+}
+

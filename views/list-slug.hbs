@@ -1,0 +1,41 @@
+<h2>{{list.name}}</h2>
+Created at: {{list.createdAt}}
+<div id="filter">
+<form method="GET" action="/list/{{list.slug}}" >
+Filter with: 
+<select name="date" id="pet-select">
+    <option value=""></option>
+    <option value="last three">Last three months</option>
+    <option value="last six">Last six months</option>
+    <option value="last year">Past year</option>
+</select>
+<input type="submit" value = "filter">
+<input type="hidden" name="listSlug" value="{{list.slug}}">
+<input type="hidden" name="filterform" value="">
+
+</form> 
+</div>
+
+<form method="POST" action="/list-journals/create" id="createnew">
+<input type="date" name="date">
+<textarea name="content" rows="5" cols="40" placeholder= "Your journals here..." required></textarea>
+<input type="hidden" name="listSlug" value="{{list.slug}}">
+<input type="submit" value="Write Down now">
+</form>
+{{#each list.journals}}
+<div id="journaltable">
+    <label>{{this.time}}</label>
+    <label id="textbox">{{this.content}}</label>
+    <label id="editbtn"><input type="submit" value = "Edit" id="edit"></label>
+    <label id="deletebtn"><input type="submit" value = "Delete" id="delete"></label>
+    <input type="hidden" name="_id" value ={{this._id}}>
+    <br>
+</div>
+{{/each}}
+
+{{#if message}}
+{{message}}
+{{/if}}
+
+
+
